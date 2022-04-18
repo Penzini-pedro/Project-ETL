@@ -4,6 +4,14 @@ import warnings
 warnings.filterwarnings('ignore')
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup as bsoup
+import requests as req
+import pandas as pd
+import feedparser
+import mysql.connector 
+import mysql.connector
+from sqlalchemy import create_engine
+import multiprocessing as mp
 
 def web_search(url):    
   
@@ -105,4 +113,26 @@ def web_find_link(x,y,z):
         return h3
     return find(x,y,z)
 
+def rss (url):
+    x=feedparser.parse(url)
+    return x
+
+def connect_mysql_cursor_execute(x):
+    db= mysql.connector.connect(host="localhost", user="root", password="password")
+    cursor = db.cursor()
+    cursor.execute(x)
+
+
+def save_csv(x,y,z):
+    x.to_csv('data\df.csv', sep=',')
+    y.to_csv('data\df2.csv', sep=',', index=False)
+    z.to_csv('data\df3.csv', sep=',', index=False)
+
+def connect_mysql_cursor_execute_tables_motor(x,y,z):
+    str_conn='mysql+pymysql://root:password@localhost:3306/proyect_semana_4_ETL'
+    motor=create_engine(str_conn)
+    
+    x.to_sql(name='rss', con=motor, if_exists='append', index=False)
+    y.to_sql(name='csv', con=motor, if_exists='append', index=False)
+    z.to_sql(name='selenium', con=motor, if_exists='append', index=False)
 
