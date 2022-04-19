@@ -1,13 +1,5 @@
 
-from src.web_search import *
-
-
-
-#cambiar la columna Average order value a un numero usable sino drop it 
-#quizas cambiar el nombre de las columnas
-#reordenar
-#creaer table en my servidor 
-
+from src.src import *
 
 #web_search ('x,y,z') con esta funcion que he hecho en otro file logre hacer un buscador
 # x= 'url', y='xpath', z='tag'
@@ -37,27 +29,23 @@ df['Rating'] = col3[0:10]
 col4= web_find_link('https://glovoapp.com/es/es/madrid/restaurantes_1/','//*[@id="default-wrapper"]/div/div/div/main/div[2]/div','a')
 df['Links'] = col4[0:10]
 
-
-
-'''col5=[]
-
+col5=[]
 for el in col4[0:10]:
-
     fr= web_find(el,'//*[@id="default-wrapper"]/div/section/div[3]/div','div.service-fee__label.dark-text')
-    fr.remove('')
     col5.append(fr)
-    #df['Delivery fee'] = col5[0:10]
-print(col5)    '''
 
+
+#lst_df=Parallel(n_jobs=8, verbose=True)(delayed(extraer)(url) for url in equipos_stats_urls[:2])
+
+df['Price of delivery'] = col5[0:10]
 
 #falta limpiar 
 
 df2= pd.read_csv("data\FOOD_DELV.csv")
-
 #cambiar la columna Average order value a un numero usable sino drop it 
 #quizas cambiar el nombre de las columnas
 #reordenar
-#creaer table en my servidor 
+
 
 
 rss_bon= rss('https://www.bonappetit.com/feed/rss')
@@ -68,13 +56,14 @@ df3= df3.drop(labels=['title_detail','links','id','guidislink','published_parsed
 # Ya tengo 3 dataframes creado (df2) que es un csv, (df) que es un web scraping con selenium, (df3) que es un rss
 #cree una funcion para salvar los tres si quiero actiualizar la base de dato
 
-save_csv(df,df2,df3) #quitar comentariuo para ejecutar
+#save_csv(df,df2,df3) #quitar comentariuo para ejecutar
 
 #creo una funcion para comunicarme con mysql : connect_mysql_cursor_execute("x")
 #donde x es el comando que quiero ejecutar
 
-connect_mysql_cursor_execute("CREATE DATABASE proyect_semana_4_ETL") #quitar comentariuo para ejecutar
+#connect_mysql_cursor_execute("CREATE DATABASE proyect_semana_4_ETL") #quitar comentariuo para ejecutar
 
 #creo una funcion para pasar el df al sql
+#cada vez que ejecuto este codigo actualiza la tabla
 connect_mysql_cursor_execute_tables_motor( df, df2, df3)
 

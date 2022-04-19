@@ -1,17 +1,16 @@
-,Name Of Restaurantes,Category,Rating,Links
-0,McDonald's®,"Hamburguesas
-Americana",93%,https://glovoapp.com/es/es/madrid/mcdonalds-madrid2/
-1,Casa Mingo,"Mediterránea
-Pollo",99%,https://glovoapp.com/es/es/madrid/casa-mingo-madrid/
-2,Five Guys,"Hamburguesas
-Americana",89%,https://glovoapp.com/es/es/madrid/fiveguys/
-3,Empanadish,Latinoamericana,95%,https://glovoapp.com/es/es/madrid/empanadish-mad/
-4,Honest Greens,"Mediterránea
-Saludable",93%,https://glovoapp.com/es/es/madrid/honest-greens/
-5,Poke House,"Saludable
-Vegetariana",96%,https://glovoapp.com/es/es/madrid/poke-house-madrid/
-6,KFC,Pollo,92%,https://glovoapp.com/es/es/madrid/kfc-madrid/
-7,Burger King,"Hamburguesas
-Americana",93%,https://glovoapp.com/es/es/madrid/burger-king-mad/
-8,Asador de Pollos Casa Galván,Pollo,98%,https://glovoapp.com/es/es/madrid/asador-de-pollos-casa-galvan-madrid/
-9,Le Coq,Pollo,97%,https://glovoapp.com/es/es/madrid/le-coq/
+,Name Of Restaurantes,Category,Rating,Links,Price of delivery
+0,Rodilla,"Mediterránea
+Bocadillos",96%,https://glovoapp.com/es/es/madrid/rodilla-madrid/,"['3,49 €']"
+1,Faborit,Saludable,96%,https://glovoapp.com/es/es/madrid/faborit-madrid/,"['5,99 €']"
+2,Mallorca,"Mediterránea
+Desayuno",97%,https://glovoapp.com/es/es/madrid/pasteleria/,"['3,99 €']"
+3,Chocolatería San Ginés,Snacks,96%,https://glovoapp.com/es/es/madrid/chocolateria-san-gines/,"['1,49 €']"
+4,Healthy Poke,"Saludable
+Poke",92%,https://glovoapp.com/es/es/madrid/healthy-poke/,"['4,49 €']"
+5,Empanadish,Latinoamericana,95%,https://glovoapp.com/es/es/madrid/empanadish-mad/,"['2,50 €']"
+6,Churrería Avenida Mirasierra,"Dulces
+Snacks",97%,https://glovoapp.com/es/es/madrid/churreria-avenida-mirasierra-madrid/,"['7,49 €']"
+7,Josepan,Latinoamericana,95%,https://glovoapp.com/es/es/madrid/josepan-madrid/,"['5,49 €']"
+8,Churreria Dickens Café,Desayuno,96%,https://glovoapp.com/es/es/madrid/churreria-dickens-cafe-madrid/,"['12,49 €']"
+9,Cristina Oria,"Mediterránea
+Gourmet",97%,https://glovoapp.com/es/es/madrid/cristina-oria-madrid/,"['3,49 €']"
